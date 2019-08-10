@@ -1,18 +1,19 @@
-#include<iostream>
- 
+#include <iostream>
+#include <fstream>
 using namespace std;
  
+
 int main() {
+	std::fstream myFile("/home/bmsce/Documents/sk1bm17cs105/algoClass/test.txt", std::ios_base::in);
 	int t, arr[100], flag = -1;
 	cout << "Enter no of test cases" << endl;
-	cin >> t;
-	
+	myFile >> t;
 	for(int i = 0; i < t; i++) {
 		int n, k;
-		cin >> n;
-		cin >> k;
+		myFile >> n;
+		myFile >> k;
 		for(int j = 0; j < n; j++) {
-			cin >> arr[j];
+			myFile >> arr[j];
 			if(arr[j] == k) 
 				flag = 1;
 		}
@@ -20,4 +21,5 @@ int main() {
 		cout << flag << endl;
 		flag = -1;
 	}
+	myFile.close();
 }
