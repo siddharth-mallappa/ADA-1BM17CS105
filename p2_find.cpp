@@ -2,11 +2,9 @@
 #include <fstream>
 using namespace std;
  
-
 int main() {
 	std::fstream myFile("/home/bmsce/Documents/sk1bm17cs105/algoClass/test.txt", std::ios_base::in);
 	int t, arr[100], flag = -1;
-	cout << "Enter no of test cases" << endl;
 	myFile >> t;
 	for(int i = 0; i < t; i++) {
 		int n, k;
@@ -17,7 +15,6 @@ int main() {
 			if(arr[j] == k) 
 				flag = 1;
 		}
-		
 		cout << flag << endl;
 		flag = -1;
 	}
