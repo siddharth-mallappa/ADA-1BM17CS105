@@ -34,19 +34,20 @@ int main() {
         cout << "\n OUTPUT: " << binaryRoot(key);
     }
    end = clock();
-   cout << "\n \nTime taken: " << (end-start)/CLK_TCK << "ms.";
+   double t = double(end-start)/double(CLOCKS_PER_SEC);
+   cout << "\n \nTime taken: " << t << "ms.";
 }
 
 /*
     X = 5000
     OUTPUT: 70
-    Time taken: 4ms
+    Time taken: 17.10ms
 
     X = 500
     OUTPUT: 22
-    Time taken: 10ms
+    Time taken: 1.868ms
 
     X = 999
     OUTPUT: 31
-    Time taken: 1ms
+    Time taken: 2.1ms
 */
