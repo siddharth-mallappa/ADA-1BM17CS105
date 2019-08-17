@@ -1,7 +1,8 @@
 #include <iostream>
-#include <cmath>
+#include <time.h>
 using namespace std;
 
+clock_t start, end;
 int binaryRoot(int key)
 {
     int start = 0, end = key;
@@ -25,9 +26,27 @@ int binaryRoot(int key)
 }
 
 int main() {
-    int key;
-    cout << "X = ";
-    cin >> key;
-    cout << "\n OUTPUT: " << binaryRoot(key);
+    start = clock();
+    {
+         int key;
+        cout << "X = ";
+        cin >> key;
+        cout << "\n OUTPUT: " << binaryRoot(key);
+    }
+   end = clock();
+   cout << "\n \nTime taken: " << (end-start)/CLK_TCK << "ms.";
 }
 
+/*
+    X = 5000
+    OUTPUT: 70
+    Time taken: 4ms
+
+    X = 500
+    OUTPUT: 22
+    Time taken: 10ms
+
+    X = 999
+    OUTPUT: 31
+    Time taken: 1ms
+*/
