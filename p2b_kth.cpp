@@ -2,8 +2,6 @@
 #include <chrono>
 using namespace std; 
 
-clock_t start, end;
-
 void bubbleSort(int arr[], int n)  {  
     int i, j;  
     for (i = 0; i < n-1; i++)      
@@ -38,6 +36,7 @@ int main() {
 		for(int i = 0; i < n; i++)
 			cin >> arr[i];
 		bubbleSort(arr, n);
+		//selectionSort(arr,n);
 		cout << "Enter K:" << endl;
 		cin >> k;
 		cout << "The Kth elements are: " << endl;
@@ -48,4 +47,22 @@ int main() {
 		<< chrono::duration_cast<chrono::milliseconds>(end - start).count()
 		<< " ms" << endl;
 }
+
+/*
+Enter size of the array
+5
+Enter elements of the array
+4
+6
+5
+1
+9
+Enter K:
+3
+The Kth elements are: 
+9 
+6 
+5 
+Elapsed time in milliseconds : 8597 ms
+*/
 
