@@ -96,3 +96,20 @@ int main() {
 		<< " ms" << endl;
 	return 0;
 }  
+
+/*
+Enter size of the array: 
+5
+Enter the elements of the array
+1
+2
+3
+4
+5
+Bubble sort: 10
+Selection sort: 10
+Merge sort: 4
+Merge sort takes minimum
+
+Elapsed time in milliseconds : 3613 ms
+*/
